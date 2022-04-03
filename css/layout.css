@@ -1,0 +1,172 @@
+@import url("./reset.css");
+@import url("./common.css");
+header .top_area {
+  height: 48px;
+}
+header .top_area .logo {
+  float: left;
+  width: 97.5px;
+  height: 18.5px;
+  padding: 0;
+  margin-top: 8px;
+}
+header .top_area .logo a {
+  display: block;
+  width: 105px;
+  height: 27px;
+  background: url(../img/bg_logo1.png) no-repeat -5px -165px;
+}
+header .top_area .gnb {
+  padding-top: 4px;
+  float: left;
+  width: calc(100% - 101px);
+}
+header .top_area .gnb .menu li {
+  float: left;
+  margin-left: 20px;
+}
+header .top_area .gnb .menu li:nth-child(1) {
+  padding-left: 40px;
+  margin-left: 30px;
+  position: relative;
+}
+header .top_area .gnb .menu li a {
+  font-size: 16px;
+  line-height: 48px;
+  font-weight: 700;
+  display: block;
+  height: 100%;
+}
+header .top_area .gnb .util {
+  float: right;
+}
+header .top_area .gnb .util li {
+  float: left;
+  padding: 0 10px;
+}
+header .top_area .gnb .util li a {
+  font-size: 16px;
+  line-height: 48px;
+  font-weight: 500;
+  display: block;
+  height: 100%;
+}
+header .top_area .gnb::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+footer .top_area {
+  display: flex;
+  justify-content: space-between;
+}
+footer .top_area ul {
+  padding: 15px 0;
+  display: flex;
+}
+footer .top_area ul li {
+  position: relative;
+  padding: 0 10px;
+}
+footer .top_area ul li:nth-child(1) {
+  padding-left: 0;
+}
+footer .top_area ul li a {
+  font-size: 12px;
+  color: #636363;
+}
+footer .top_area ul li.policy a {
+  color: #000;
+}
+footer .top_area ul li + li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 1px;
+  height: 14px;
+  margin-top: -6px;
+  background: #dcdcdc;
+}
+footer .top_area .sns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0;
+}
+footer .top_area .sns a {
+  width: 24px;
+  height: 24px;
+  background: url(../img/bg_sns.png) no-repeat 0 0;
+}
+footer .top_area .sns a + a {
+  margin-left: 15px;
+}
+footer .top_area .sns a.fb {
+  background-position: -25px 0;
+}
+footer .top_area .sns a.tw {
+  background-position: -50px 0;
+}
+footer .top_area .sns a.ins {
+  background-position: -75px 0;
+}
+footer .top_area .sns a.ks {
+  background-position: -100px 0;
+}
+footer .top_area .sns a.yt {
+  background-position: -125px 0;
+}
+footer .top_area .sns a.bl {
+  background-position: -150px 0;
+}
+footer .bottom_area {
+  padding: 22px 0;
+  border-top: 1px solid #ccc;
+  position: relative;
+}
+footer .bottom_area .contact {
+  margin-right: 40px;
+  width: 108px;
+  height: 45px;
+  background: url(../img/bg.png) no-repeat -180px 0;
+  float: left;
+}
+footer .bottom_area .address {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 1.2;
+}
+footer .bottom_area .address p {
+  padding-bottom: 2px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #636363;
+}
+footer .bottom_area .mark {
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+footer .bottom_area .mark a + a {
+  margin-left: 10px;
+}
+footer .up_btn {
+  background: url(../img/up_arrow.png);
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  display: block;
+  width: 34px;
+  height: 34px;
+  margin-left: 600px;
+  opacity: 0;
+  transition: 1s;
+  z-index: 100;
+}
+footer .up_btn.on {
+  opacity: 1;
+  bottom: 98px;
+}

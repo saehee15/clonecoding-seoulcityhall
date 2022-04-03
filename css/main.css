@@ -1,0 +1,301 @@
+@import url("./common.css");
+body {
+  font-family: "Nanum Gothic", sans-serif;
+}
+body a {
+  color: #222;
+}
+
+.section2 {
+  position: relative;
+  padding: 50px 0 0;
+}
+.section2 h2 {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dbdbdb;
+  font-size: 24px;
+}
+.section2 .service {
+  overflow: hidden;
+}
+.section2 .service ul {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+.section2 .service ul li {
+  height: 90px;
+  flex: 1;
+}
+.section2 .service ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  text-align: center;
+}
+.section2 .service ul li a i {
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 10px;
+  background-image: url(../img/bg_service.png);
+  background-repeat: no-repeat;
+}
+.section2 .service ul li a i.public {
+  background-position: -360px 0;
+}
+.section2 .service ul li a i.answer {
+  background-position: 0 0;
+}
+.section2 .service ul li a i.job {
+  background-position: -120px 0;
+}
+.section2 .service ul li a i.realestate {
+  background-position: -300px 0;
+}
+.section2 .service ul li a i.portal {
+  background-position: -180px 0;
+}
+.section2 .service ul li a i.welfare {
+  background-position: -960px 0;
+}
+.section2 .service ul li a i.house {
+  background-position: -780px 0;
+}
+.section2 .service ul li a i.icare {
+  background-position: -840px 0;
+}
+.section2 .service ul li a i.mediahub {
+  background-position: -1020px 0;
+}
+.section2 .service ul li a i.ebook {
+  background-position: -1080px 0;
+}
+.section2 .service ul li a i.council {
+  background-position: -600px 0;
+}
+.section2 .service .all {
+  width: 112px;
+  height: 29px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+  font-size: 15px;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  padding-left: 13px;
+  line-height: 28px;
+  background: url(../img/arrow.png) no-repeat right 13px top 50%;
+}
+
+.section3 {
+  margin-top: 35px;
+  background: #eff4f8;
+}
+.section3 ul {
+  display: flex;
+}
+.section3 ul li {
+  flex: 1;
+  padding: 20px 0;
+  position: relative;
+}
+.section3 ul li + li::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 0px;
+  width: 1px;
+  height: 60px;
+  background: #dbdbdb;
+}
+
+.section4 .inner4 {
+  padding: 50px 0 50px;
+  border-bottom: 2px solid #222222;
+  display: flex;
+}
+.section4 .inner4 > div {
+  width: 360px;
+  position: relative;
+}
+.section4 .inner4 > div.board_center {
+  margin: 0 36px;
+}
+.section4 .inner4 > div.service ul {
+  margin: 0;
+  padding: 17px 5px 7px 20px;
+  background: #eff4f8;
+}
+.section4 .inner4 > div.service ul li {
+  float: left;
+  width: 50%;
+  position: relative;
+  padding: 0 0 10px 10px;
+}
+.section4 .inner4 > div.service ul li::before {
+  content: "";
+  position: absolute;
+  background: #666666;
+  width: 2px;
+  height: 2px;
+  left: 0;
+  top: 50%;
+  margin-top: -6px;
+}
+.section4 .inner4 > div.service ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.section4 .inner4 h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #dbdbdb;
+}
+.section4 .inner4 ul li {
+  padding: 6px 0 6px 0;
+  position: relative;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+}
+.section4 .inner4 ul li strong {
+  margin: 0 9px 0 0;
+}
+.section4 .inner4 ul li strong.cul {
+  color: #9b64d3;
+}
+.section4 .inner4 ul li strong.env {
+  color: #599100;
+}
+.section4 .inner4 ul li strong.eco {
+  color: #069363;
+}
+.section4 .inner4 .more {
+  position: absolute;
+  right: 0;
+  top: 6px;
+  width: 22px;
+  height: 20px;
+  border: 1px solid #ddd;
+  background: url(../img/bg_logo1.png) no-repeat -1px -1px;
+}
+
+.section5 {
+  padding-top: 40px;
+}
+.section5 h2 {
+  padding: 0 0 20px 0;
+  font-size: 24px;
+}
+.section5 ul {
+  padding: 0 27px;
+  margin-left: -59px;
+  display: flex;
+}
+.section5 ul li {
+  flex: 1;
+  height: 145px;
+  margin-left: 59px;
+}
+.section5 ul li.house {
+  background: url(../img/info1.png) no-repeat;
+}
+.section5 ul li.economy {
+  background: url(../img/info2.png) no-repeat;
+}
+.section5 ul li.traffic {
+  background: url(../img/info3.png) no-repeat;
+}
+.section5 ul li.environment {
+  background: url(../img/info4.png) no-repeat;
+}
+.section5 ul li.welfare {
+  background: url(../img/info5.png) no-repeat;
+}
+.section5 ul li.safty {
+  background: url(../img/info6.png) no-repeat;
+}
+.section5 ul li.culture {
+  background: url(../img/info7.png) no-repeat;
+}
+.section5 ul li.work {
+  background: url(../img/info8.png) no-repeat;
+}
+.section5 ul li a {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  padding-top: 100px;
+}
+
+.section7 {
+  margin-bottom: 50px;
+}
+
+.section8 {
+  position: relative;
+  padding: 50px 0 50px 0;
+  border-top: 2px solid #222;
+}
+
+.section9 ul {
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-top: 1px solid #d0d0d0;
+  border-bottom: 1px solid #d0d0d0;
+  background: #d0d0d0;
+}
+.section9 ul li {
+  float: left;
+  width: 33.3333333333%;
+}
+.section9 ul li button {
+  display: block;
+  width: 100%;
+  padding: 16px 0;
+  border-left: 1px solid #d0d0d0;
+  background: #f7f7f7;
+  color: #333;
+  text-align: center;
+}
+.section9 ul li button .txt {
+  display: inline-block;
+  position: relative;
+  padding-right: 20px;
+  font-size: 14px;
+}
+.section9 ul li button .txt::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: 0px;
+  height: 7px;
+  width: 7px;
+  border-style: solid;
+  border-color: #373737;
+  border-width: 0px 2px 2px 0px;
+  transform: rotate(-135deg);
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform-origin: center center;
+}
+.section9 ul li .sub {
+  display: none;
+}
+.section9 ul li:last-child button {
+  border-right: 1px solid #d0d0d0;
+}
+.section9 ul::after {
+  display: block;
+  content: "";
+  clear: both;
+}

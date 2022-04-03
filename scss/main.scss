@@ -1,0 +1,371 @@
+@import url('./common.css');
+
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    a{
+        color: #222;
+    }
+}
+
+.section2 {
+    position: relative;
+    padding: 50px 0 0;
+
+    h2 {
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #dbdbdb;
+        font-size: 24px;
+    }
+
+    .service {
+        overflow: hidden;
+
+        ul {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+
+            li {
+                height: 90px;
+                flex: 1;
+
+
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    font-size: 15px;
+                    text-align: center;
+
+                    i {
+                        display: block;
+                        width: 60px;
+                        height: 60px;
+                        margin: 0 auto 10px;
+                        background-image: url(../img/bg_service.png);
+                        background-repeat: no-repeat;
+
+                        &.public {
+                            background-position: -360px 0;
+                        }
+
+                        &.answer {
+                            background-position: 0 0;
+                        }
+
+                        &.job {
+                            background-position: -120px 0;
+                        }
+
+                        &.realestate {
+                            background-position: -300px 0;
+                        }
+
+                        &.portal {
+                            background-position: -180px 0;
+                        }
+
+                        &.welfare {
+                            background-position: -960px 0;
+                        }
+
+                        &.house {
+                            background-position: -780px 0;
+                        }
+
+                        &.icare {
+                            background-position: -840px 0;
+                        }
+
+                        &.mediahub {
+                            background-position: -1020px 0;
+                        }
+
+                        &.ebook {
+                            background-position: -1080px 0;
+                        }
+
+                        &.council {
+                            background-position: -600px 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .all {
+            width: 112px;
+            height: 29px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            display: block;
+            font-size: 15px;
+            position: absolute;
+            right: 0;
+            top: 50px;
+            padding-left: 13px;
+            line-height: 28px;
+            background: url(../img/arrow.png) no-repeat right 13px top 50%;
+        }
+    }
+}
+
+.section3 {
+    margin-top: 35px;
+    background: #eff4f8;
+
+    ul {
+        display: flex;
+
+        li {
+            flex: 1;
+            padding: 20px 0;
+            position: relative;
+
+            &+li {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 25px;
+                    left: 0px;
+                    width: 1px;
+                    height: 60px;
+                    background: #dbdbdb;
+                }
+            }
+        }
+    }
+
+}
+
+.section4 {
+    .inner4 {
+        padding: 50px 0 50px;
+        border-bottom: 2px solid #222222;
+        display: flex;
+
+        >div {
+            width: 360px;
+            position: relative;
+
+            &.board_center {
+                margin: 0 36px;
+            }
+
+            &.service {
+                ul {
+                    margin: 0;
+                    padding: 17px 5px 7px 20px;
+                    background: #eff4f8;
+                    li{
+                        float: left;
+                        width: 50%;
+                        position: relative;
+                        padding: 0 0 10px 10px;
+
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            background: #666666;
+                            width: 2px;
+                            height: 2px;
+                            left: 0;
+                            top: 50%;
+                            margin-top: -6px;
+                        }
+
+                    }
+                    &::after{
+                        content: "";
+                        display: block;
+                        clear: both;
+                    }
+                }
+            }
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #dbdbdb;
+
+        }
+
+        ul {
+            li {
+                padding: 6px 0 6px 0;
+                position: relative;
+                width: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: 15px;
+
+                strong {
+                    margin: 0 9px 0 0;
+
+                    &.cul {
+                        color: #9b64d3;
+                    }
+
+                    &.env {
+                        color: #599100;
+                    }
+
+                    &.eco {
+                        color: #069363;
+                    }
+                }
+            }
+        }
+
+        .more {
+            position: absolute;
+            right: 0;
+            top: 6px;
+            width: 22px;
+            height: 20px;
+            border: 1px solid #ddd;
+            background: url(../img/bg_logo1.png) no-repeat -1px -1px;
+        }
+    }
+}
+
+.section5 {
+    padding-top: 40px;
+
+    h2 {
+        padding: 0 0 20px 0;
+        font-size: 24px;
+    }
+
+    ul {
+        padding: 0 27px;
+        margin-left: -59px;
+        display: flex;
+
+        li {
+            flex: 1;
+            height: 145px;
+            margin-left: 59px;
+
+            &.house {
+                background: url(../img/info1.png) no-repeat;
+            }
+
+            &.economy {
+                background: url(../img/info2.png) no-repeat;
+            }
+
+            &.traffic {
+                background: url(../img/info3.png) no-repeat;
+            }
+
+            &.environment {
+                background: url(../img/info4.png) no-repeat;
+            }
+
+            &.welfare {
+                background: url(../img/info5.png) no-repeat;
+            }
+
+            &.safty {
+                background: url(../img/info6.png) no-repeat;
+            }
+
+            &.culture {
+                background: url(../img/info7.png) no-repeat;
+            }
+
+            &.work {
+                background: url(../img/info8.png) no-repeat;
+            }
+
+            a {
+                width: 100%;
+                display: inline-block;
+                text-align: center;
+                font-size: 16px;
+                padding-top: 100px;
+            }
+
+        }
+    }
+}
+
+.section7 {
+    margin-bottom: 50px;
+}
+
+// slide
+.section8 {
+    position: relative;
+    padding: 50px 0 50px 0;
+    border-top: 2px solid #222;
+}
+
+.section9 {
+    ul {
+        position: relative;
+        margin-bottom: 20px;
+        overflow: hidden;
+        border-top: 1px solid #d0d0d0;
+        border-bottom: 1px solid #d0d0d0;
+        background: #d0d0d0;
+
+        li {
+            float: left;
+            width: calc(100% / 3);
+
+            button {
+                display: block;
+                width: 100%;
+                padding: 16px 0;
+                border-left: 1px solid #d0d0d0;
+                background: #f7f7f7;
+                color: #333;
+                text-align: center;
+
+                .txt {
+                    display: inline-block;
+                    position: relative;
+                    padding-right: 20px;
+                    font-size: 14px;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 6px;
+                        right: 0px;
+                        height: 7px;
+                        width: 7px;
+                        border-style: solid;
+                        border-color: #373737;
+                        border-width: 0px 2px 2px 0px;
+                        transform: rotate(-135deg);
+                        transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+                        transform-origin: center center;
+                    }
+                }
+            }
+
+            .sub {
+                display: none;
+            }
+
+            &:last-child {
+                button {
+                    border-right: 1px solid #d0d0d0;
+                }
+            }
+        }
+
+        &::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+    }
+}
