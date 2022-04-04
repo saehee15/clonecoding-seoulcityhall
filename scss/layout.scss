@@ -73,6 +73,143 @@ header {
         }
     }
 
+    .bottom_area {
+        display: block;
+        position: relative;
+        background: #fff;
+        height: 120px;
+        padding: 0;
+
+        .logo {
+            margin: 38px 0 30px;
+            float: left;
+            background: url(../img/bg_logo.png) no-repeat 0 0;
+            width: 178px;
+            height: 51px;
+        }
+
+        .search {
+            width: 460px;
+            border: 3px solid #2292e9;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 40px;
+            box-sizing: border-box;
+
+            .search_txt {
+                font-family: 'Nanum Gothic';
+                color: #767676;
+                font-size: 16px;
+                float: left;
+                width: calc(100% - 42px);
+                border: 0;
+                padding: 0 10px;
+                height: 38px;
+                line-height: 38px;
+                box-sizing: border-box;
+
+                &::placeholder {
+                    color: #2292e9;
+                    font-size: 14px;
+                  }
+            }
+
+            img {
+                margin-left: 3px;
+                vertical-align: middle;
+                cursor: pointer;
+                position: absolute;
+                top: 12px;
+                right: 42px;
+            }
+
+            .search_btn {
+                float: left;
+                width: 36px;
+                height: 36px;
+                padding: 0;
+                background: url(../img/bg_logo1.png) no-repeat -32px -97px;
+            }
+        }
+
+        .lang_site {
+            height: 21px;
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            select {
+                float: left;
+                width: 80px;
+                height: 21px;
+                border-color: #afcfea;
+                color: #1E6CB3;
+                font-size: 12px;
+                line-height: 21px;
+                background: url(../img/down_arrow.png) no-repeat no-repeat 96% center;
+                background-size: 8px auto;
+                appearance: none;
+                padding-left: 3px;
+
+                option {
+                    font-weight: normal;
+                    display: block;
+                    white-space: nowrap;
+                    padding: 0px 2px 3px;
+                    color: inherit;
+                }
+            }
+
+            button {
+                float: right;
+                width: 30px;
+                font-size: 11px;
+                color: #fff;
+                background-color: #1E6CB3;
+                border: 0;
+                height: 21px;
+            }
+        }
+
+        .weather_info {
+            width: 260px;
+            height: 85px;
+            float: right;
+            margin-top: 34px;
+            vertical-align: top;
+            text-align: right;
+
+            a {
+                
+                img {
+                    float: left;
+                }
+                
+                .info{
+                    margin-top: -15px;
+                    p {
+                        text-align: left;
+    
+                        &:nth-child(1){
+                            font-size: 16px;
+                            letter-spacing: -1px;
+                            line-height: 2;
+                            strong {
+                                font-size: 25px;
+                                margin-right: 10px;
+                            }
+                        }
+                        &:nth-child(2) {
+                            font-size: 13px;
+                            letter-spacing: -1px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
 }
 
 footer {
@@ -212,7 +349,8 @@ footer {
         opacity: 0;
         transition: 1s;
         z-index: 100;
-        &.on{
+
+        &.on {
             opacity: 1;
             bottom: 98px;
         }
