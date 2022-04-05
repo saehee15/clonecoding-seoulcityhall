@@ -39,13 +39,13 @@ $(function(){
       });
 
       $('.btn_state1').click(function(){
-        if($('.pause').hasClass('on')){
-            $('.pause').removeClass('on');
-            $('.play').addClass('on');
+        if($('.btn_state1 .pause').hasClass('on')){
+            $('.btn_state1 .pause').removeClass('on');
+            $('.btn_state1 .play').addClass('on');
             content1.autoplay.stop();
         }else{
-            $('.pause').addClass('on');
-            $('.play').removeClass('on');
+            $('.btn_state1 .pause').addClass('on');
+            $('.btn_state1 .play').removeClass('on');
             content1.autoplay.start();
         }
     })
@@ -68,13 +68,13 @@ $(function(){
       });
 
       $('.btn_state2').click(function(){
-        if($('.pause').hasClass('on')){
-            $('.pause').removeClass('on');
-            $('.play').addClass('on');
+        if($('.btn_state2 .pause').hasClass('on')){
+            $('.btn_state2 .pause').removeClass('on');
+            $('.btn_state2 .play').addClass('on');
             content2.autoplay.stop();
         }else{
-            $('.pause').addClass('on');
-            $('.play').removeClass('on');
+            $('.btn_state2 .pause').addClass('on');
+            $('.btn_state2 .play').removeClass('on');
             content2.autoplay.start();
         }
     })
@@ -98,13 +98,13 @@ $(function(){
       });
 
       $('.btn_state').click(function(){
-        if($('.pause').hasClass('on')){
-            $('.pause').removeClass('on');
-            $('.play').addClass('on');
+        if($('.btn_state .pause').hasClass('on')){
+            $('.btn_state .pause').removeClass('on');
+            $('.btn_state .play').addClass('on');
             slide2.autoplay.stop();
         }else{
-            $('.pause').addClass('on');
-            $('.play').removeClass('on');
+            $('.btn_state .pause').addClass('on');
+            $('.btn_state .play').removeClass('on');
             slide2.autoplay.start();
         }
     })
@@ -120,6 +120,8 @@ $(function(){
             $(this).addClass('on')
             $(this).siblings('li').removeClass('on')
             $(this).children('ul').stop().slideDown();
+            $(this).siblings('li').children('ul').stop().slideUp();
+            
         }
       });
 
