@@ -501,7 +501,7 @@ body {
         .more {
             position: absolute;
             right: 0;
-            top: 6px;
+            top: 0px;
             width: 22px;
             height: 20px;
             border: 1px solid #ddd;
@@ -853,7 +853,7 @@ body {
     }
 
     .navigation_wrap {
-        margin-top: 5px;
+        margin-top: 10px;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -907,14 +907,19 @@ body {
                     }
                 }
             }
+            &::after{
+                display: block;
+                content: "";
+                clear: both;
+            }
         }
     }
 }
 
 .section9 {
+    position: relative;
+    margin-bottom: 20px;
     ul {
-        position: relative;
-        margin-bottom: 20px;
         overflow: hidden;
         border-top: 1px solid #d0d0d0;
         border-bottom: 1px solid #d0d0d0;
@@ -923,6 +928,25 @@ body {
         li {
             float: left;
             width: calc(100% / 3);
+            
+            &.on{
+                button{
+                    background: #e2e2e2;
+                    .txt::after{
+                        top: 3px;
+                        transition: 0.3s;
+                        transform: rotate(45deg);
+                        transform-origin: center center;
+                    
+                    }
+
+                }
+                // > ul {
+                //     display: block;
+                //     border-bottom: 0;
+                // }
+                
+            }
 
             button {
                 display: block;
@@ -932,6 +956,8 @@ body {
                 background: #f7f7f7;
                 color: #333;
                 text-align: center;
+
+                
 
                 .txt {
                     display: inline-block;
@@ -956,11 +982,23 @@ body {
                 }
             }
 
-            .sub {
+            ul {
                 display: none;
+                position: absolute;
+                bottom: 50px;
+                left: 0;
+                width: 100%;
+                padding: 10px 20px 20px;
+                background: #fff;
+                border: 1px solid #d0d0d0;
+                z-index: 10;
 
-                &.on {
-                    display: block;
+                li{
+                    float: left;
+                    width: 25%;
+                    margin-top: 10px;
+                    font-size: 14px;
+                    line-height: 1.35em;
                 }
 
             }

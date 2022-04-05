@@ -1,7 +1,7 @@
 $(function(){
+    // 스크롤트리거
     ScrollTrigger.create({
-        trigger:".section8",
-        start:"top 100%",
+        start:"top top",
         onEnter:function(){
             $('.up_btn').addClass('on')
         },
@@ -20,6 +20,7 @@ $(function(){
         $('.'+idVal).addClass('on').siblings().removeClass('on')
     })
 
+    // 슬라이드
     var content1 = new Swiper(".content1", {
         loop: true,
         autoplay: {
@@ -49,8 +50,6 @@ $(function(){
         }
     })
     
-
-
     var content2 = new Swiper(".content2", {
         loop: true,
         autoplay: {
@@ -80,8 +79,6 @@ $(function(){
         }
     })
 
-    
-    
     var slide2 = new Swiper(".slide2", {
         slidesPerView: 'auto',
         loop: true,
@@ -100,7 +97,6 @@ $(function(){
         },
       });
 
-    // 정지, 재생 버튼
       $('.btn_state').click(function(){
         if($('.pause').hasClass('on')){
             $('.pause').removeClass('on');
@@ -112,6 +108,19 @@ $(function(){
             slide2.autoplay.start();
         }
     })
-    
+
+    // 서브메뉴
+    $(document).on("click", ".section9 li", function () {
+        var hasOn = $(this).hasClass('on')
+        if(hasOn){
+            $(this).removeClass('on')
+            $(this).children('ul').stop().slideUp();
+           
+        } else {
+            $(this).addClass('on')
+            $(this).siblings('li').removeClass('on')
+            $(this).children('ul').stop().slideDown();
+        }
+      });
 
 })

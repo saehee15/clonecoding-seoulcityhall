@@ -403,7 +403,7 @@ body a {
 .section4 .inner4 .more {
   position: absolute;
   right: 0;
-  top: 6px;
+  top: 0px;
   width: 22px;
   height: 20px;
   border: 1px solid #ddd;
@@ -689,7 +689,7 @@ body a {
   margin-right: 43px;
 }
 .section8 .navigation_wrap {
-  margin-top: 5px;
+  margin-top: 10px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -728,10 +728,17 @@ body a {
 .section8 .navigation_wrap .navigation .btn_state button.on {
   display: block;
 }
+.section8 .navigation_wrap .navigation::after {
+  display: block;
+  content: "";
+  clear: both;
+}
 
-.section9 ul {
+.section9 {
   position: relative;
   margin-bottom: 20px;
+}
+.section9 ul {
   overflow: hidden;
   border-top: 1px solid #d0d0d0;
   border-bottom: 1px solid #d0d0d0;
@@ -740,6 +747,15 @@ body a {
 .section9 ul li {
   float: left;
   width: 33.3333333333%;
+}
+.section9 ul li.on button {
+  background: #e2e2e2;
+}
+.section9 ul li.on button .txt::after {
+  top: 3px;
+  transition: 0.3s;
+  transform: rotate(45deg);
+  transform-origin: center center;
 }
 .section9 ul li button {
   display: block;
@@ -770,11 +786,23 @@ body a {
   transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   transform-origin: center center;
 }
-.section9 ul li .sub {
+.section9 ul li ul {
   display: none;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px 20px;
+  background: #fff;
+  border: 1px solid #d0d0d0;
+  z-index: 10;
 }
-.section9 ul li .sub.on {
-  display: block;
+.section9 ul li ul li {
+  float: left;
+  width: 25%;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.35em;
 }
 .section9 ul li:last-child button {
   border-right: 1px solid #d0d0d0;
