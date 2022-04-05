@@ -185,6 +185,11 @@ header .bottom_area .weather_info a .info p:nth-child(2) {
   font-size: 13px;
   letter-spacing: -1px;
 }
+header::after {
+  display: block;
+  content: "";
+  clear: both;
+}
 
 footer .top_area {
   display: flex;
