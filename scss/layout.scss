@@ -219,15 +219,23 @@ header {
 
 footer {
     .top_area {
-        display: flex;
-        justify-content: space-between;
+        position: relative;
+        width: 1152px;
+        margin: 0 auto;
+        min-width: 1152px;
 
         ul {
             padding: 15px 0;
-            display: flex;
+
+            &::after{
+                display: block;
+                content: "";
+                clear: both;
+            }
 
             li {
                 position: relative;
+                float: left;
                 padding: 0 10px;
 
                 &:nth-child(1) {
@@ -262,14 +270,18 @@ footer {
         }
 
         .sns {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 0;
+            position: absolute;
+            top: 55%;
+            right: 0;
+            margin-top: -14px;
+            overflow: hidden;
+            text-align: center;
 
             a {
+                display: inline-block;
                 width: 24px;
                 height: 24px;
+                text-indent: -9999em;
                 background: url(../img/bg_sns.png) no-repeat 0 0;
 
                 &+a {

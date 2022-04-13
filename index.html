@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
@@ -50,7 +51,7 @@
                         <fieldset>
                             <legend class="blind">검색</legend>
                             <input type="text" class="search_txt" placeholder="검색어를 입력해주세요" />
-                            <img src="./img/keyboard.png" alt="">
+                            <img src="./img/keyboard.png" alt="keyboard">
                             <button class="search_btn">
                                 <span class="blind">검색</span>
                             </button>
@@ -58,18 +59,18 @@
                     </form>
                 </div>
                 <div class="lang_site">
-                    <select name="" id="">
-                        <option value="">ENGLISH</option>
-                        <option value="">日本語</option>
-                        <option value="">简体中文</option>
-                        <option value="">繁体中文</option>
-                        <option value="">WorldWide</option>
+                    <select name="" id="lang">
+                        <option value="http://english.seoul.go.kr/?SSid=101_01">ENGLISH</option>
+                        <option value="http://japanese.seoul.go.kr/?SSid=101_02">日本語</option>
+                        <option value="http://chinese.seoul.go.kr/?SSid=101_04">简体中文</option>
+                        <option value="http://tchinese.seoul.go.kr/?SSid=101_03">繁体中文</option>
+                        <option value="http://world.seoul.go.kr/">WorldWide</option>
                     </select>
-                    <button>GO</button>
+                    <button id="btnLang">GO</button>
                 </div>
                 <div class="weather_info">
                     <a href="">
-                        <img src="./img/weather.png" alt="">
+                        <img src="./img/weather.png" alt="weather">
                         <div class="info">
                             <p><strong>8.4℃</strong>구름많음</p>
                             <p>미세먼지(보통) 초미세먼지(나쁨)</p>
@@ -83,7 +84,15 @@
         <div class="inner_wrap">
             <section class="section1">
                 <div class="slide1">
-                    <div class="tab">
+                    <div class="cont cont01 active">
+                        <h3><a href="">주요뉴스</a></h3>
+                        <div class="slide">주요내용</div>
+                    </div>
+                    <div class="cont cont02">
+                        <h3><a href="">시민참여</a></h3>
+                        <div class="slide">시민참여</div>
+                    </div>
+                    <!-- <div class="tab">
                         <a href="" data-tap="content1" class="on"><i></i>주요뉴스</a>
                         <a href="" data-tap="content2"><i></i>시민참여</a>
                     </div>
@@ -91,31 +100,31 @@
                         <ul class="swiper-wrapper">
                             <li class="swiper-slide">
                                 <a href="">
-                                    <img src="./img/slide1_1_1.jpeg" alt="">
+                                    <img src="./img/slide1_1_1.jpeg" alt="2주간 거리두기 완화... 10인 이하 24시까지 2022. 4. 4.(월)~ 2022. 4. 17.(일">
                                     <p>2주간 거리두기 완화... 10인 이하 24시까지 2022. 4. 4.(월)~ 2022. 4. 17.(일)</p>
                                 </a>
                             </li>
                             <li class="swiper-slide">
                                 <a href="">
-                                    <img src="./img/slide1_1_2.jpeg" alt="">
+                                    <img src="./img/slide1_1_2.jpeg" alt="“3년간 안심소득 받으세요” 28일부터 500가구 모집">
                                     <p>“3년간 안심소득 받으세요” 28일부터 500가구 모집</p>
                                 </a>
                             </li>
                             <li class="swiper-slide">
                                 <a href="">
-                                    <img src="./img/slide1_1_3.jpeg" alt="">
+                                    <img src="./img/slide1_1_3.jpeg" alt="전기차, 충전이 고플 때…설치장소 시민 신청 접수(추가) 2022.4.1.(금) ~ 4.8.(금">
                                     <p>전기차, 충전이 고플 때…설치장소 시민 신청 접수(추가) 2022.4.1.(금) ~ 4.8.(금)</p>
                                 </a>
                             </li>
                             <li class="swiper-slide">
                                 <a href="">
-                                    <img src="./img/slide1_1_4.jpeg" alt="">
+                                    <img src="./img/slide1_1_4.jpeg" alt="특고·프리랜서에 '긴급생계비 50만원' 지원…신청방법은?">
                                     <p>특고·프리랜서에 '긴급생계비 50만원' 지원…신청방법은?</p>
                                 </a>
                             </li>
                             <li class="swiper-slide">
                                 <a href="">
-                                    <img src="./img/slide1_1_5.jpeg" alt="">
+                                    <img src="./img/slide1_1_5.jpeg" alt="요식업 창업 꿈꾼다면 '청년쿡 비즈니스센터'…1기 참여자 모집">
                                     <p>요식업 창업 꿈꾼다면 '청년쿡 비즈니스센터'…1기 참여자 모집</p>
                                 </a>
                             </li>
@@ -170,7 +179,7 @@
                                 <button class="btn next"><span class="blind">다음</span></button>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="banner">
                     <div class="banner_img">
@@ -187,15 +196,15 @@
                             <span class="blind">예방접종 전체보기</span>
                             <div class="vaccine_lists">
                                 <span class="date"><em class="blind">날짜기준 :</em>2022.04.05.00시 기준</span>
-                                <span class="result1"><em class="blind">1차 :</em>88.5%</span>
-                                <span class="result2"><em class="blind">2차 :</em>87.6%</span>
-                                <span class="result3"><em class="blind">3차 :</em>62.9%</span>
-                                <span class="result4"><em class="blind">4차 :</em>0.4%</span>
+                                <span class="v_result1"><em class="blind">1차 :</em>88.5%</span>
+                                <span class="v_result2"><em class="blind">2차 :</em>87.6%</span>
+                                <span class="v_result3"><em class="blind">3차 :</em>62.9%</span>
+                                <span class="v_result4"><em class="blind">4차 :</em>0.4%</span>
                             </div>
                         </a>
                     </div>
                     <a href="">
-                        <img src="./img/banner_img.gif" alt="">
+                        <img src="./img/banner_img.gif" alt="서울특별시장 오세훈입니다">
                     </a>
                 </div>
             </section>
@@ -244,10 +253,10 @@
         <section class="section3">
             <div class="inner">
                 <ul class="banner">
-                    <li><a href=""><img src="./img/banner1.jpeg" alt=""></a></li>
-                    <li><a href=""><img src="./img/banner2.jpeg" alt=""></a></li>
-                    <li><a href=""><img src="./img/banner3.jpeg" alt=""></a></li>
-                    <li><a href=""><img src="./img/banner4.jpeg" alt=""></a></li>
+                    <li><a href=""><img src="./img/banner1.jpeg" alt="코로나19 재택치료자 안내"></a></li>
+                    <li><a href=""><img src="./img/banner2.jpeg" alt="코로나19 서울시관련 선별진료소 현황"></a></li>
+                    <li><a href=""><img src="./img/banner3.jpeg" alt="코로나19 자가검사키트 사용방법과 행동요령"></a></li>
+                    <li><a href=""><img src="./img/banner4.jpeg" alt="코로나19 재택치료FAQ 격리, 생활관련 문의"></a></li>
                 </ul>
             </div>
         </section>
@@ -345,54 +354,54 @@
                     <a href="">
                         <div class="txt wel">복지</div>
                         <div class="img_area">
-                            <img src="./img/news1.jpeg" alt="">
+                            <img src="./img/news1.jpeg" alt="스토킹 피해 신변보호대상자에 주거침입 예방 '안심장비 3종' 첫 지원">
                         </div>
                         <p>스토킹 피해 신변보호대상자에 주거침입 예방 '안심장비 3종' 첫 지원</p>
                     </a>
                     <a href="">
                         <div class="txt env">환경</div>
                         <div class="img_area">
-                            <img src="./img/news2.jpeg" alt="">
+                            <img src="./img/news2.jpeg" alt="치매 초기 어르신에 딱!…‘기억 숲 산책’참여하세요">
                         </div>
                         <p>치매 초기 어르신에 딱!…‘기억 숲 산책’참여하세요</p>
                     </a>
                     <a href="">
                         <div class="txt work">행정</div>
                         <div class="img_area">
-                            <img src="./img/news3.jpeg" alt="">
+                            <img src="./img/news3.jpeg" alt="모바일 세금납부 토스(TOSS)로도 OK… 고지서 수령부터 원스톱서비스">
                         </div>
                         <p>모바일 세금납부 토스(TOSS)로도 OK… 고지서 수령부터 원스톱서비스</p>
                     </a>
                     <a href="">
                         <div class="txt env">환경</div>
                         <div class="img_area">
-                            <img src="./img/news4.jpeg" alt="">
+                            <img src="./img/news4.jpeg" alt="흐르는 빗물 모아 필요할 때 다시 써요… 빗물저금통 설치비 90% 지원">
                         </div>
                         <p>흐르는 빗물 모아 필요할 때 다시 써요… 빗물저금통 설치비 90% 지원</p>
                     </a>
                     <a href="">
                         <div class="txt env">환경</div>
                         <div class="img_area">
-                            <img src="./img/news5.jpeg" alt="">
+                            <img src="./img/news5.jpeg" alt="'야경명소 `반포 달빛무지개분수` 4월부터 재가동…희망의 물줄기 내뿜는다">
                         </div>
                         <p>'야경명소 `반포 달빛무지개분수` 4월부터 재가동…희망의 물줄기 내뿜는다</p>
                     </a>
                     <a href="">
                         <div class="txt traffic">교통</div>
                         <div class="img_area">
-                            <img src="./img/news6.jpeg" alt="">
+                            <img src="./img/news6.jpeg" alt="만70세 이상 운전면허 자진반납 어르신에게 10만원 선불교통카드">
                         </div>
                         <p>만70세 이상 운전면허 자진반납 어르신에게 10만원 선불교통카드</p>
                     </a>
                     <a href="">
                         <div class="txt env">환경</div>
                         <div class="img_area">
-                            <img src="./img/news7.jpeg" alt="">
+                            <img src="./img/news7.jpeg" alt="서울대공원, 2022년 산림치유·숲해설 프로그램 운영">
                         </div>
                         <p>서울대공원, 2022년 산림치유·숲해설 프로그램 운영</p>
                     </a>
                     <a href="">
-                        <img src="./img/news8.jpeg" alt="">
+                        <img src="./img/news8.jpeg" alt="코로나19 서울시 생활정보">
                     </a>
                 </div>
                 <div class="bottom_area">
@@ -400,7 +409,7 @@
                         <h2>서울영상</h2>
                         <a href="https://www.youtube.com/watch?v=ojo8Ygl2L9I" target="_blank">
                             <div class="img_area">
-                                <img src="./img/video.jpeg" alt="">
+                                <img src="./img/video.jpeg" alt="서울 안심소득">
                                 <p class="txt">어려울수록 더 많이! 서울의 미래 복지 시스템을 위해 5년간의 소득보장실험이 서울에서 시작됩니다!</p>
                             </div>
 
@@ -436,33 +445,33 @@
                             <li><a href="" class="tw">트위터</a></li>
                             <li><a href="" class="bl">네이버블로그</a></li>
                             <li><a href="" class="yt">유투브</a></li>
-                            <li><a href="" class="ks">카카오스토리</a></li>
+                            <li><a href="" class="ks" title="새창">카카오스토리</a></li>
                         </ul>
                     </div>
                 </div>
             </section>
             <section class="section7">
                 <h2 class="blind">스토리인서울</h2>
-                <a href=""><img src="./img/story_img.jpeg" alt=""></a>
+                <a href=""><img src="./img/story_img.jpeg" alt="서울 건축 산책"></a>
             </section>
             <section class="section8">
                 <div class="swiper slide2">
                     <ul class="swiper-wrapper">
-                        <li class="swiper-slide"><a href=""><img src="./img/slide1.jpeg" alt=""></a></li>
-                        <li class="swiper-slide"><a href=""><img src="./img/slide2.jpeg" alt=""></a></li>
-                        <li class="swiper-slide"><a href=""><img src="./img/slide3.jpeg" alt=""></a></li>
-                        <li class="swiper-slide"><a href=""><img src="./img/slide4.png" alt=""></a></li>
-                        <li class="swiper-slide"><a href=""><img src="./img/slide5.jpeg" alt=""></a></li>
-                        <li class="swiper-slide"><a href=""><img src="./img/slide6.jpeg" alt=""></a></li>
-                        <li class="swiper-slide"><a href=""><img src="./img/slide7.jpeg" alt=""></a></li>
-                        <li class="swiper-slide"><a href=""><img src="./img/slide8.jpeg" alt=""></a></li>
-                        <li class="swiper-slide"><a href=""><img src="./img/slide9.jpeg" alt=""></a></li>
-                        <li class="swiper-slide"><a href=""><img src="./img/slide10.jpeg" alt=""></a></li>
-                        <li class="swiper-slide"><a href=""><img src="./img/slide11.jpeg" alt=""></a></li>
-                        <li class="swiper-slide"><a href=""><img src="./img/slide12.png" alt=""></a></li>
-                        <li class="swiper-slide"><a href=""><img src="./img/slide13.jpeg" alt=""></a></li>
-                        <li class="swiper-slide"><a href=""><img src="./img/slide14.jpeg" alt=""></a></li>
-                        <li class="swiper-slide"><a href=""><img src="./img/slide15.jpeg" alt=""></a></li>
+                        <li class="swiper-slide"><a href=""><img src="./img/slide1.jpeg" alt="찾아가는 여성 취업 상담서비스"></a></li>
+                        <li class="swiper-slide"><a href=""><img src="./img/slide2.jpeg" alt="서울시의 모든 공모전을 한눈에"></a></li>
+                        <li class="swiper-slide"><a href=""><img src="./img/slide3.jpeg" alt="서울시 국제교류현황"></a></li>
+                        <li class="swiper-slide"><a href=""><img src="./img/slide4.png" alt="AI 면접체험 역량검사 프로그램"></a></li>
+                        <li class="swiper-slide"><a href=""><img src="./img/slide5.jpeg" alt="2022 지식재산 정보활용 창업경진대회"></a></li>
+                        <li class="swiper-slide"><a href=""><img src="./img/slide6.jpeg" alt="2022년도 데이터 활용 사업화지원"></a></li>
+                        <li class="swiper-slide"><a href=""><img src="./img/slide7.jpeg" alt="서울교통 주간브리핑"></a></li>
+                        <li class="swiper-slide"><a href=""><img src="./img/slide8.jpeg" alt="청탁금지법 행동강력 위반행위 집중신고기간 운영"></a></li>
+                        <li class="swiper-slide"><a href=""><img src="./img/slide9.jpeg" alt="전사, 순직 군인 유가족 찾습니다"></a></li>
+                        <li class="swiper-slide"><a href=""><img src="./img/slide10.jpeg" alt="정부 보조금24"></a></li>
+                        <li class="swiper-slide"><a href=""><img src="./img/slide11.jpeg" alt="6.25비정규군 공로자 보상신청 안내"></a></li>
+                        <li class="swiper-slide"><a href=""><img src="./img/slide12.png" alt="서울특별시 도농상생 공공급식"></a></li>
+                        <li class="swiper-slide"><a href=""><img src="./img/slide13.jpeg" alt="스마트서울포털"></a></li>
+                        <li class="swiper-slide"><a href=""><img src="./img/slide14.jpeg" alt="대한민국 국가상징"></a></li>
+                        <li class="swiper-slide"><a href=""><img src="./img/slide15.jpeg" alt="서울시 건설공사의 모든것"></a></li>
                     </ul>
                 </div>
                 <div class="navigation_wrap">
@@ -480,12 +489,12 @@
             <section class="section9">
                 <h2 class="blind">관련 사이트</h2>
                     <ul>
-                        <li>
+                        <li class="link_item">
                             <button>
                                 <span class="txt">직속기관·사업소</span>
                                 <em class="blind">접기</em>
                             </button>
-                            <ul>
+                            <ul class="sub">
                                 <li><a href="">서울시립대학교</a></li>
                                 <li><a href="">보건환경연구원</a></li>
                                 <li><a href="">인재개발원</a></li>
@@ -514,12 +523,12 @@
                                 <li><a href="">아동복지센터</a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="link_item">
                             <button>
                                 <span class="txt">공사·출연기관</span>
                                 <em class="blind">접기</em>
                             </button>
-                            <ul>
+                            <ul class="sub">
                                 <li><a href="">서울교통공사</a></li>
                                 <li><a href="">서울시설공단</a></li>
                                 <li><a href="">서울특별시 농수산식품공사</a></li>
@@ -548,12 +557,12 @@
                                 <li><a href="">서울시미디어재단TBS</a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="link_item">
                             <button>
                                 <span class="txt">자치구</span>
                                 <em class="blind">접기</em>
                             </button>
-                            <ul>
+                            <ul class="sub">
                                 <li><a href="">강남구</a></li>
                                 <li><a href="">강동구</a></li>
                                 <li><a href="">강북구</a></li>
@@ -597,12 +606,12 @@
                     <li><a href="">누리집지도</a></li>
                 </ul>
                 <div class="sns">
-                    <a href="" class="fb">페이스북</a>
-                    <a href="" class="tw">트위터</a>
-                    <a href="" class="ins">인스타그램</a>
-                    <a href="" class="ks">카카오스토리</a>
-                    <a href="" class="yt">유튜브</a>
-                    <a href="" class="bl">블로그</a>
+                    <a href="" class="fb"><span class="blind">페이스북</span></a>
+                    <a href="" class="tw"><span class="blind">트위터</span></a>
+                    <a href="" class="ins"><span class="blind">인스타그램</span></a>
+                    <a href="" class="ks"><span class="blind">카카오스토리</span></a>
+                    <a href="" class="yt"><span class="blind">유튜브</span></a>
+                    <a href="" class="bl"><span class="blind">블로그</span></a>
                 </div>
             </div>
             <div class="bottom_area">
@@ -615,8 +624,8 @@
                     <p class="copy">© Seoul Metropolitan Government all rights reserved</p>
                 </div>
                 <div class="mark">
-                    <a href=""><img src="./img/mark1.png" alt=""></a>
-                    <a href=""><img src="./img/mark2.png" alt=""></a>
+                    <a href=""><img src="./img/mark1.png" alt="정보보호 및 개인정보보호 관리체계(ISMS-P) 인증마크"></a>
+                    <a href=""><img src="./img/mark2.png" alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)"></a>
                 </div>
             </div>
         </div>
@@ -625,6 +634,10 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+				
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="./js/main.js"></script>

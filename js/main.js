@@ -1,4 +1,11 @@
 $(function(){
+
+  $('#btnLang').on('click',function(){
+    var url = $('#lang').val();
+
+    window.open(url)
+  })
+
     // 스크롤트리거
     ScrollTrigger.create({
         start:"top top",
@@ -79,6 +86,13 @@ $(function(){
         }
     })
 
+    // $('.slide2').slick({
+    //   slidesToShow: 3,
+    //   slidesToScroll: 1,
+    //   autoplay: true,
+    //   autoplaySpeed: 2000,
+    // });
+
     var slide2 = new Swiper(".slide2", {
         slidesPerView: 'auto',
         loop: true,
@@ -111,18 +125,42 @@ $(function(){
 
     // 서브메뉴
     $(document).on("click", ".section9 li", function () {
-        var hasOn = $(this).hasClass('on')
-        if(hasOn){
-            $(this).removeClass('on')
-            $(this).children('ul').stop().slideUp();
-           
-        } else {
-            $(this).addClass('on')
-            $(this).siblings('li').removeClass('on')
-            $(this).children('ul').stop().slideDown();
-            $(this).siblings('li').children('ul').stop().slideUp();
-            
+      var hasOn = $(this).hasClass('on')
+      if(hasOn){
+          $('.section9 .link_item').removeClass('on')
+          $('.section9 .sub').stop().slideUp(); 
+
+      } else {
+          $('.section9 .link_item').removeClass('on')
+          $(this).addClass('on')
+
+          $('.section9 .sub').stop().slideUp();  
+          $(this).children('.sub').stop().slideDown();
+      }
+    });
+
+    // 첫번재
+    $('.section9 .sub li:first-child').keydown(function (e) { 
+      var keyCode = event.keyCode || event.which;
+      if(keyCode == 9){
+        if(event.shiftKey){
+          $('.section9 .link_item').removeClass('on')
+          $('.section9 .sub').stop().slideUp(); 
         }
-      });
+
+      }
+    })
+
+    //마지막
+    $('.section9 .sub li:last-child').keydown(function (e) { 
+      var keyCode = event.keyCode || event.which;
+      if(keyCode == 9){
+        if(!event.shiftKey){
+          $('.section9 .link_item').removeClass('on')
+          $('.section9 .sub').stop().slideUp(); 
+        }
+
+      }
+    });
 
 })

@@ -192,15 +192,22 @@ header::after {
 }
 
 footer .top_area {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  width: 1152px;
+  margin: 0 auto;
+  min-width: 1152px;
 }
 footer .top_area ul {
   padding: 15px 0;
-  display: flex;
+}
+footer .top_area ul::after {
+  display: block;
+  content: "";
+  clear: both;
 }
 footer .top_area ul li {
   position: relative;
+  float: left;
   padding: 0 10px;
 }
 footer .top_area ul li:nth-child(1) {
@@ -225,14 +232,18 @@ footer .top_area ul li + li::before {
   background: #dcdcdc;
 }
 footer .top_area .sns {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0;
+  position: absolute;
+  top: 55%;
+  right: 0;
+  margin-top: -14px;
+  overflow: hidden;
+  text-align: center;
 }
 footer .top_area .sns a {
+  display: inline-block;
   width: 24px;
   height: 24px;
+  text-indent: -9999em;
   background: url(../img/bg_sns.png) no-repeat 0 0;
 }
 footer .top_area .sns a + a {

@@ -9,277 +9,158 @@ body {
 }
 
 .section1 {
-    display: flex;
+    &::after{
+        display: block;
+        content: "";
+        clear: both;
+    }
 
     .slide1 {
         position: relative;
-        margin-right: 20px;
-        overflow: hidden;
+        float: left;
+        // overflow: hidden;
+        width: 770px;
+        height: 350px;
+        background: #ccc;
 
-        .tab {
-            a {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 80px;
-                height: 175px;
-                background-color: #d2e1e9;
-                color: #333;
-                text-align: center;
-                padding-top: 50px;
+        .cont{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #0f0;
+            right: 0;
+            width: 690px;
 
-                i {
-                    display: block;
-                    width: 50px;
-                    height: 50px;
-                    margin: 0 auto 10px;
-                    background-color: #fff;
-                    background-position: 0 0;
-                    border-radius: 50%;
-                    background: url(../img/slide1_i.png) no-repeat 0 0;
+            &.active{
+                z-index: 10;
+
+                h3{
+                    background: #00f;
                 }
-
-                &.on {
-                    background-color: #0158a8;
-                    color: #fff;
-                }
-
-                &:nth-child(2) {
-                    top: 175px;
-
-                    i {
-                        background-position: -50px 0px;
-
-                    }
-                }
-
             }
+
+            h3{
+                position: absolute;
+                left: -80px;
+                height: 50%;
+                background: #ccc;
+                width: 80px;
+            }
+
+        }
+        .cont01 h3{ 
+            top: 0;
+        }
+        .cont02 h3{
+            top: 50%;
         }
 
-        .con {
-            margin-left: 80px;
-            display: none;
+    }
+    
+    .banner{
+        float: right;
 
-            &.on {
-                display: block;
+        .banner_img {
+            position: relative;
+            width: 100%;
+            height: 214px;
+            overflow: hidden;
+            background: url('../img/banner.gif') no-repeat 0 0;
+            margin-bottom: 5px;
+    
+            span {
+                position: absolute;
+                display: inline-block;
+                min-width: 47px;
+                color: #fff;
+                text-align: center;
             }
-
-            li {
-                a{
-                    display: block;
+    
+            .corona_lists {
+                .date {
+                    top: 11px;
+                    font-size: 12px;
+                    font-weight: 700;
+                    margin-left: 25px;
+                    color: #000;
+                    left: initial;
+                    right: 20px;
+                    letter-spacing: -0.05em;
+                    height: 16px;
                 }
-                p {
-                    position: absolute;
-                    left: 0;
-                    bottom: 0px;
-                    width: 99.7%;
+    
+                .result1 {
+                    top: 100px;
+                    width: 130px;
+                    margin-left: 35px;
+                    font-size: 18px;
+                }
+    
+                .result2 {
+                    top: 100px;
+                    width: 130px;
+                    margin-left: 195px;
+                    font-size: 18px;
+                }
+            }
+    
+            .vaccine_lists {
+                .date {
+                    top: 137px;
+                    font-size: 12px;
+                    font-weight: 700;
+                    margin-left: 25px;
+                    color: #000;
+                    left: initial;
+                    right: 20px;
+                    letter-spacing: -0.05em;
+                    height: 16px;
+                }
+    
+                .v_result1 {
+                    top: 175px;
+                    width: 70px;
                     height: 40px;
                     line-height: 40px;
-                    padding-left: 10px;
-                    padding-right: 122px;
-                    background-color: rgba(0, 0, 0, .7);
-                    color: #fff;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    font-size: 14px;
-
+                    margin-left: 23px;
+                    font-size: 18px;
+                    letter-spacing: -0.05em;
                 }
-            }
-
-            .navigation_wrap {
-                position: absolute;
-                display: block;
-                right: 3px;
-                bottom: 4px;
-                width: 110px;
-                height: 32px;
-                z-index: 10;
-                overflow: hidden;
-
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: 4px;
-                    right: 70px;
-                    width: 1px;
-                    height: 24px;
-                    background: rgba(255, 255, 255, .5);
+    
+                .v_result2 {
+                    top: 175px;
+                    width: 70px;
+                    height: 40px;
+                    line-height: 40px;
+                    margin-left: 105px;
+                    font-size: 18px;
+                    letter-spacing: -0.05em;
                 }
-
-
-
-                .pages {
-                    position: absolute;
-                    top: 45%;
-                    width: 40px;
-                    color: #fff;
-                    transform: translateY(-50%);
-                    font-size: 13px;
+    
+                .v_result3 {
+                    top: 175px;
+                    width: 70px;
+                    height: 40px;
+                    line-height: 40px;
+                    margin-left: 190px;
+                    font-size: 18px;
+                    letter-spacing: -0.05em;
                 }
-
-                .navigation {
-                    position: absolute;
-                    top: 50%;
-                    right: 4px;
-                    transform: translateY(-50%);
-                    height: 18px;
-                    z-index: 10;
-                    float: left;
-
-                    .btn {
-                        float: left;
-                        width: 20px;
-                        height: 20px;
-                        overflow: hidden;
-        
-        
-                        &.prev {
-                            background: url(../img/arrow1.png) no-repeat -241px -285px;
-                            margin-right: 3px;
-                        }
-        
-                        &.next {
-                            background: url(../img/arrow1.png) no-repeat -256px -285px;
-                            width: 19px;
-
-                        }
-        
-                        &.pause {
-                            background: url(../img/arrow1.png) no-repeat -285px -285px;
-                        }
-        
-                        &.play {
-                            background: url(../img/arrow1.png) no-repeat -269px -285px;
-                        }
-        
-                        &.swiper-button-next::after,
-                        &.swiper-button-prev::after {
-                            display: none;
-                        }
-                    }
-        
-                    .btn_state1 {
-                        button {
-                            display: none;
-        
-                            &.on {
-                                display: block;
-                            }
-                        }
-                    }
-                    .btn_state2 {
-                        button {
-                            display: none;
-        
-                            &.on {
-                                display: block;
-                            }
-                        }
-                    }
+    
+                .v_result4 {
+                    top: 175px;
+                    width: 70px;
+                    height: 40px;
+                    line-height: 40px;
+                    margin-left: 270px;
+                    font-size: 18px;
+                    letter-spacing: -0.05em;
                 }
             }
         }
     }
 
-    .banner_img {
-        position: relative;
-        width: 100%;
-        height: 214px;
-        overflow: hidden;
-        background: url('../img/banner.gif') no-repeat 0 0;
-        margin-bottom: 5px;
-
-        span {
-            position: absolute;
-            display: inline-block;
-            min-width: 47px;
-            color: #fff;
-            text-align: center;
-        }
-
-        .corona_lists {
-            .date {
-                top: 11px;
-                font-size: 12px;
-                font-weight: 700;
-                margin-left: 25px;
-                color: #000;
-                left: initial;
-                right: 20px;
-                letter-spacing: -0.05em;
-                height: 16px;
-            }
-
-            .result1 {
-                top: 100px;
-                width: 130px;
-                margin-left: 35px;
-                font-size: 18px;
-            }
-
-            .result2 {
-                top: 100px;
-                width: 130px;
-                margin-left: 195px;
-                font-size: 18px;
-            }
-        }
-
-        .vaccine_lists {
-            .date {
-                top: 137px;
-                font-size: 12px;
-                font-weight: 700;
-                margin-left: 25px;
-                color: #000;
-                left: initial;
-                right: 20px;
-                letter-spacing: -0.05em;
-                height: 16px;
-            }
-
-            .result1 {
-                top: 175px;
-                width: 70px;
-                height: 40px;
-                line-height: 40px;
-                margin-left: 23px;
-                font-size: 18px;
-                letter-spacing: -0.05em;
-            }
-
-            .result2 {
-                top: 175px;
-                width: 70px;
-                height: 40px;
-                line-height: 40px;
-                margin-left: 105px;
-                font-size: 18px;
-                letter-spacing: -0.05em;
-            }
-
-            .result3 {
-                top: 175px;
-                width: 70px;
-                height: 40px;
-                line-height: 40px;
-                margin-left: 190px;
-                font-size: 18px;
-                letter-spacing: -0.05em;
-            }
-
-            .result4 {
-                top: 175px;
-                width: 70px;
-                height: 40px;
-                line-height: 40px;
-                margin-left: 270px;
-                font-size: 18px;
-                letter-spacing: -0.05em;
-            }
-        }
-    }
+    
 }
 
 .section2 {
@@ -299,11 +180,17 @@ body {
         ul {
             width: 100%;
             margin: 0 auto;
-            display: flex;
+
+            &::after{
+                display: block;
+                content: "";
+                clear: both;
+            }
 
             li {
                 height: 90px;
-                flex: 1;
+                width: calc(100% / 11);
+                float: left;
 
 
                 a {
@@ -391,10 +278,15 @@ body {
     background: #eff4f8;
 
     ul {
-        display: flex;
+        &::after{
+            display: block;
+            content: "";
+            clear: both;
+        }
 
         li {
-            flex: 1;
+            float: left;
+            width: 25%;
             padding: 20px 0;
             position: relative;
 
@@ -418,9 +310,15 @@ body {
     .inner4 {
         padding: 50px 0 50px;
         border-bottom: 2px solid #222222;
-        display: flex;
+        
+        &::after{
+            display: block;
+            content: "";
+            clear: both;
+        }
 
         >div {
+            float: left;
             width: 360px;
             position: relative;
 
@@ -521,11 +419,17 @@ body {
     ul {
         padding: 0 27px;
         margin-left: -59px;
-        display: flex;
+
+        &::after{
+            display: block;
+            content: "";
+            clear: both;
+        }
 
         li {
-            flex: 1;
+            float: left;
             height: 145px;
+            width: 85px;
             margin-left: 59px;
 
             &.house {
@@ -667,8 +571,12 @@ body {
     }
 
     .bottom_area {
-        display: flex;
 
+        &::after{
+            display: block;
+            content: "";
+            clear: both;
+        }
 
         h2 {
             padding-bottom: 11px;
@@ -676,8 +584,9 @@ body {
         }
 
         .video {
-            // width: 280px;
-            // height: 152px;
+            float: left;
+            width: 280px;
+            height: 152px;
             position: relative;
             overflow: hidden;
 
@@ -722,6 +631,7 @@ body {
         }
 
         .news {
+            float: left;
             margin: 0 20px;
             width: 480px;
 
@@ -751,6 +661,7 @@ body {
         }
 
         .sns {
+            float: left;
             position: relative;
             width: 350px;
             height: 195px;
@@ -842,6 +753,12 @@ body {
     padding: 50px 0 50px 0;
     border-top: 2px solid #222;
 
+    &::after{
+        display: block;
+        content: "";
+        clear: both;
+    }
+
     ul {
         li {
             float: left;
@@ -854,17 +771,19 @@ body {
 
     .navigation_wrap {
         margin-top: 10px;
-        display: flex;
-        justify-content: flex-end;
         align-items: center;
+        float: right;
+        
 
         .pagination {
             padding-top: 4px;
             width: 50px;
+            float: left;
 
         }
 
         .navigation {
+            float: left;
             .btn {
                 float: left;
                 width: 20px;
