@@ -1,76 +1,76 @@
 @import url("./reset.css");
 @import url("./common.css");
-header .top_area {
+.header .top_area {
   height: 48px;
 }
-header .top_area .logo {
+.header .top_area .logo {
   float: left;
   width: 97.5px;
   height: 18.5px;
   padding: 0;
   margin-top: 8px;
 }
-header .top_area .logo a {
+.header .top_area .logo a {
   display: block;
   width: 105px;
   height: 27px;
   background: url(../img/bg_logo1.png) no-repeat -5px -165px;
 }
-header .top_area .gnb {
+.header .top_area .gnb {
   padding-top: 4px;
   float: left;
   width: calc(100% - 101px);
 }
-header .top_area .gnb .menu li {
+.header .top_area .gnb .menu li {
   float: left;
   margin-left: 20px;
 }
-header .top_area .gnb .menu li:nth-child(1) {
+.header .top_area .gnb .menu li:nth-child(1) {
   padding-left: 40px;
   margin-left: 30px;
   position: relative;
 }
-header .top_area .gnb .menu li a {
+.header .top_area .gnb .menu li a {
   font-size: 16px;
   line-height: 48px;
   font-weight: 700;
   display: block;
   height: 100%;
 }
-header .top_area .gnb .util {
+.header .top_area .gnb .util {
   float: right;
 }
-header .top_area .gnb .util li {
+.header .top_area .gnb .util li {
   float: left;
   padding: 0 10px;
 }
-header .top_area .gnb .util li a {
+.header .top_area .gnb .util li a {
   font-size: 16px;
   line-height: 48px;
   font-weight: 500;
   display: block;
   height: 100%;
 }
-header .top_area .gnb::after {
+.header .top_area .gnb::after {
   display: block;
   content: "";
   clear: both;
 }
-header .bottom_area {
+.header .bottom_area {
   display: block;
   position: relative;
   background: #fff;
   height: 120px;
   padding: 0;
 }
-header .bottom_area .logo {
+.header .bottom_area .logo {
   margin: 38px 0 30px;
   float: left;
   background: url(../img/bg_logo.png) no-repeat 0 0;
   width: 178px;
   height: 51px;
 }
-header .bottom_area .search {
+.header .bottom_area .search {
   width: 460px;
   border: 3px solid #2292e9;
   position: absolute;
@@ -79,7 +79,7 @@ header .bottom_area .search {
   top: 40px;
   box-sizing: border-box;
 }
-header .bottom_area .search .search_txt {
+.header .bottom_area .search .search_txt {
   font-family: "Nanum Gothic";
   color: #767676;
   font-size: 16px;
@@ -91,19 +91,19 @@ header .bottom_area .search .search_txt {
   line-height: 38px;
   box-sizing: border-box;
 }
-header .bottom_area .search .search_txt::-moz-placeholder {
+.header .bottom_area .search .search_txt::-moz-placeholder {
   color: #2292e9;
   font-size: 14px;
 }
-header .bottom_area .search .search_txt:-ms-input-placeholder {
+.header .bottom_area .search .search_txt:-ms-input-placeholder {
   color: #2292e9;
   font-size: 14px;
 }
-header .bottom_area .search .search_txt::placeholder {
+.header .bottom_area .search .search_txt::placeholder {
   color: #2292e9;
   font-size: 14px;
 }
-header .bottom_area .search img {
+.header .bottom_area .search img {
   margin-left: 3px;
   vertical-align: middle;
   cursor: pointer;
@@ -111,20 +111,20 @@ header .bottom_area .search img {
   top: 12px;
   right: 42px;
 }
-header .bottom_area .search .search_btn {
+.header .bottom_area .search .search_btn {
   float: left;
   width: 36px;
   height: 36px;
   padding: 0;
   background: url(../img/bg_logo1.png) no-repeat -32px -97px;
 }
-header .bottom_area .lang_site {
+.header .bottom_area .lang_site {
   height: 21px;
   position: absolute;
   right: 0;
   top: 0;
 }
-header .bottom_area .lang_site select {
+.header .bottom_area .lang_site select {
   float: left;
   width: 80px;
   height: 21px;
@@ -139,14 +139,14 @@ header .bottom_area .lang_site select {
           appearance: none;
   padding-left: 3px;
 }
-header .bottom_area .lang_site select option {
+.header .bottom_area .lang_site select option {
   font-weight: normal;
   display: block;
   white-space: nowrap;
   padding: 0px 2px 3px;
   color: inherit;
 }
-header .bottom_area .lang_site button {
+.header .bottom_area .lang_site button {
   float: right;
   width: 30px;
   font-size: 11px;
@@ -155,7 +155,7 @@ header .bottom_area .lang_site button {
   border: 0;
   height: 21px;
 }
-header .bottom_area .weather_info {
+.header .bottom_area .weather_info {
   width: 260px;
   height: 85px;
   float: right;
@@ -163,64 +163,64 @@ header .bottom_area .weather_info {
   vertical-align: top;
   text-align: right;
 }
-header .bottom_area .weather_info a img {
+.header .bottom_area .weather_info a img {
   float: left;
 }
-header .bottom_area .weather_info a .info {
+.header .bottom_area .weather_info a .info {
   margin-top: -15px;
 }
-header .bottom_area .weather_info a .info p {
+.header .bottom_area .weather_info a .info p {
   text-align: left;
 }
-header .bottom_area .weather_info a .info p:nth-child(1) {
+.header .bottom_area .weather_info a .info p:nth-child(1) {
   font-size: 16px;
   letter-spacing: -1px;
   line-height: 2;
 }
-header .bottom_area .weather_info a .info p:nth-child(1) strong {
+.header .bottom_area .weather_info a .info p:nth-child(1) strong {
   font-size: 25px;
   margin-right: 10px;
 }
-header .bottom_area .weather_info a .info p:nth-child(2) {
+.header .bottom_area .weather_info a .info p:nth-child(2) {
   font-size: 13px;
   letter-spacing: -1px;
 }
-header::after {
+.header::after {
   display: block;
   content: "";
   clear: both;
 }
 
-footer .top_area {
+.footer .top_area {
   position: relative;
   width: 1152px;
   margin: 0 auto;
   min-width: 1152px;
 }
-footer .top_area ul {
+.footer .top_area ul {
   padding: 15px 0;
 }
-footer .top_area ul::after {
+.footer .top_area ul::after {
   display: block;
   content: "";
   clear: both;
 }
-footer .top_area ul li {
+.footer .top_area ul li {
   position: relative;
   float: left;
   padding: 0 10px;
 }
-footer .top_area ul li:nth-child(1) {
+.footer .top_area ul li:nth-child(1) {
   padding-left: 0;
 }
-footer .top_area ul li a {
+.footer .top_area ul li a {
   font-size: 12px;
   color: #636363;
 }
-footer .top_area ul li.policy a {
+.footer .top_area ul li.policy a {
   color: #000;
 }
-footer .top_area ul li + li::before {
+.footer .top_area ul li + li::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -231,7 +231,7 @@ footer .top_area ul li + li::before {
   margin-top: -6px;
   background: #dcdcdc;
 }
-footer .top_area .sns {
+.footer .top_area .sns {
   position: absolute;
   top: 55%;
   right: 0;
@@ -239,66 +239,66 @@ footer .top_area .sns {
   overflow: hidden;
   text-align: center;
 }
-footer .top_area .sns a {
+.footer .top_area .sns a {
   display: inline-block;
   width: 24px;
   height: 24px;
   text-indent: -9999em;
   background: url(../img/bg_sns.png) no-repeat 0 0;
 }
-footer .top_area .sns a + a {
+.footer .top_area .sns a + a {
   margin-left: 15px;
 }
-footer .top_area .sns a.fb {
+.footer .top_area .sns a.fb {
   background-position: -25px 0;
 }
-footer .top_area .sns a.tw {
+.footer .top_area .sns a.tw {
   background-position: -50px 0;
 }
-footer .top_area .sns a.ins {
+.footer .top_area .sns a.ins {
   background-position: -75px 0;
 }
-footer .top_area .sns a.ks {
+.footer .top_area .sns a.ks {
   background-position: -100px 0;
 }
-footer .top_area .sns a.yt {
+.footer .top_area .sns a.yt {
   background-position: -125px 0;
 }
-footer .top_area .sns a.bl {
+.footer .top_area .sns a.bl {
   background-position: -150px 0;
 }
-footer .bottom_area {
+.footer .bottom_area {
   padding: 22px 0;
   border-top: 1px solid #ccc;
   position: relative;
 }
-footer .bottom_area .contact {
+.footer .bottom_area .contact {
   margin-right: 40px;
   width: 108px;
   height: 45px;
   background: url(../img/bg.png) no-repeat -180px 0;
   float: left;
 }
-footer .bottom_area .address {
+.footer .bottom_area .address {
   display: inline-block;
   vertical-align: top;
   line-height: 1.2;
 }
-footer .bottom_area .address p {
+.footer .bottom_area .address p {
   padding-bottom: 2px;
   font-size: 12px;
   font-weight: 500;
   color: #636363;
 }
-footer .bottom_area .mark {
+.footer .bottom_area .mark {
   position: absolute;
   top: 20px;
   right: 0;
 }
-footer .bottom_area .mark a + a {
+.footer .bottom_area .mark a + a {
   margin-left: 10px;
 }
-footer .up_btn {
+.footer .up_btn {
   background: url(../img/up_arrow.png);
   position: fixed;
   bottom: -100px;
@@ -311,7 +311,7 @@ footer .up_btn {
   transition: 1s;
   z-index: 100;
 }
-footer .up_btn.on {
+.footer .up_btn.on {
   opacity: 1;
   bottom: 98px;
 }
