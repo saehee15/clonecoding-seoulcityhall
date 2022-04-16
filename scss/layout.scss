@@ -86,6 +86,11 @@
             background: url(../img/bg_logo.png) no-repeat 0 0;
             width: 178px;
             height: 51px;
+            
+            a{
+                display: block;
+                height: 100%;
+            }
         }
 
         .search {

@@ -70,6 +70,10 @@
   width: 178px;
   height: 51px;
 }
+.header .bottom_area .logo a {
+  display: block;
+  height: 100%;
+}
 .header .bottom_area .search {
   width: 460px;
   border: 3px solid #2292e9;

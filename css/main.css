@@ -22,7 +22,6 @@ body a {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #0f0;
   right: 0;
   width: 690px;
 }
@@ -38,6 +37,99 @@ body a {
   height: 50%;
   background: #ccc;
   width: 80px;
+}
+.section1 .slide1 .cont .slide_wrap {
+  position: relative;
+  height: 350px;
+}
+.section1 .slide1 .cont .slide_wrap .slide {
+  position: relative;
+}
+.section1 .slide1 .cont .slide_wrap .slide a p {
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  padding-right: 122px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.section1 .slide1 .cont .slide_wrap .custom_paging {
+  position: absolute;
+  right: 7%;
+  bottom: 12px;
+  width: 20px;
+  color: #fff;
+  font-size: 13px;
+  margin-right: 20px;
+}
+.section1 .slide1 .cont .slide_wrap .custom_paging li {
+  display: none;
+}
+.section1 .slide1 .cont .slide_wrap .custom_paging li.slick-active {
+  display: block;
+}
+.section1 .slide1 .cont .slide_wrap .slick-prev {
+  position: absolute;
+  top: 332px;
+  left: 91%;
+  width: 15px;
+  color: #000;
+  font-size: 13px;
+  z-index: 1;
+  background: url(../img/arrow1.png) no-repeat center;
+  background-position: -241px -285px;
+}
+.section1 .slide1 .cont .slide_wrap .slick-prev::before {
+  display: none;
+}
+.section1 .slide1 .cont .slide_wrap .slick-next {
+  position: absolute;
+  top: 332px;
+  right: 10px;
+  width: 15px;
+  color: #fff;
+  font-size: 13px;
+  background: url(../img/arrow1.png) no-repeat center;
+  background-position: -256px -285px;
+}
+.section1 .slide1 .cont .slide_wrap .slick-next::before {
+  display: none;
+}
+.section1 .slide1 .cont .slide_wrap .buttons {
+  position: absolute;
+  right: 27px;
+  bottom: 13px;
+  width: 15px;
+  height: 15px;
+  color: #fff;
+  font-size: 13px;
+}
+.section1 .slide1 .cont .slide_wrap .buttons .pause {
+  display: none;
+  height: 100%;
+  background: url(../img/arrow1.png) no-repeat;
+  background-position: -285px -285px;
+}
+.section1 .slide1 .cont .slide_wrap .buttons .pause.on {
+  display: block;
+}
+.section1 .slide1 .cont .slide_wrap .buttons .play {
+  display: none;
+  height: 100%;
+  background: url(../img/arrow1.png) no-repeat;
+  background-position: -269px -285px;
+}
+.section1 .slide1 .cont .slide_wrap .buttons .play.on {
+  display: block;
 }
 .section1 .slide1 .cont01 h3 {
   top: 0;

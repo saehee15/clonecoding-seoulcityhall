@@ -1,5 +1,4 @@
 $(function(){
-
   $('#btnLang').on('click',function(){
     var url = $('#lang').val();
 
@@ -27,36 +26,35 @@ $(function(){
         $('.'+idVal).addClass('on').siblings().removeClass('on')
     })
 
-    // 슬라이드
-    var content1 = new Swiper(".content1", {
-        loop: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-          },
-
-        pagination: {
-          el: ".pages",
-          type: "fraction",
-        },
-        navigation: {
-            nextEl: ".next",
-            prevEl: ".prev",
-        },
-      });
-
-      $('.btn_state1').click(function(){
-        if($('.btn_state1 .pause').hasClass('on')){
-            $('.btn_state1 .pause').removeClass('on');
-            $('.btn_state1 .play').addClass('on');
-            content1.autoplay.stop();
-        }else{
-            $('.btn_state1 .pause').addClass('on');
-            $('.btn_state1 .play').removeClass('on');
-            content1.autoplay.start();
-        }
-    })
+    $(".slide1-1").slick({
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      speed: 2000,
+      autoplay: true,
+      arrows: true,
+      prevArrow: '<button type="button" class="slick-prev"></button>',
+      nextArrow: '<button type="button" class="slick-next"></button>',
+      dots: true,
+      dotsClass: "custom_paging",
+      customPaging: function (slider, i) {
+        console.log(slider);
+        return i + 1 + "/" + slider.slideCount;
+      }
+    });
     
+    $(".pause").on("click", function () {
+      $(".slide1-1").slick("slickPause");
+    });
+    
+    $(".play").on("click", function () {
+      $(".slide1-1").slick("slickPlay");
+    });
+    
+
+
     var content2 = new Swiper(".content2", {
         loop: true,
         autoplay: {
@@ -85,13 +83,6 @@ $(function(){
             content2.autoplay.start();
         }
     })
-
-    // $('.slide2').slick({
-    //   slidesToShow: 3,
-    //   slidesToScroll: 1,
-    //   autoplay: true,
-    //   autoplaySpeed: 2000,
-    // });
 
     var slide2 = new Swiper(".slide2", {
         slidesPerView: 'auto',
@@ -139,7 +130,7 @@ $(function(){
       }
     });
 
-    // 첫번재
+    // 첫번째 메뉴에서
     $('.section9 .sub li:first-child').keydown(function (e) { 
       var keyCode = event.keyCode || event.which;
       if(keyCode == 9){
@@ -147,11 +138,10 @@ $(function(){
           $('.section9 .link_item').removeClass('on')
           $('.section9 .sub').stop().slideUp(); 
         }
-
       }
     })
 
-    //마지막
+    //마지막 메뉴에서
     $('.section9 .sub li:last-child').keydown(function (e) { 
       var keyCode = event.keyCode || event.which;
       if(keyCode == 9){
@@ -159,7 +149,6 @@ $(function(){
           $('.section9 .link_item').removeClass('on')
           $('.section9 .sub').stop().slideUp(); 
         }
-
       }
     });
 
