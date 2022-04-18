@@ -33,7 +33,32 @@ body {
                 z-index: 10;
 
                 h3 {
-                    background: #00f;
+                    background: #0158a8;
+
+                    &::after {
+                        content: " ";
+                        position: absolute;
+                        z-index: 10;
+                        left: 99%;
+                        top: 50%;
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 25px 0 25px 32px;
+                        border-color: transparent transparent transparent #0158a8;
+                        margin-top: -25px;
+                    }
+
+
+                    a {
+                        color: #fff;
+                        height: 100%;
+                        display: block;
+                    }
+                }
+
+                .slide_wrap {
+                    display: block;
                 }
             }
 
@@ -41,18 +66,42 @@ body {
                 position: absolute;
                 left: -80px;
                 height: 50%;
-                background: #ccc;
+                background: #d2e1e9;
                 width: 80px;
+
+                a {
+                    color: #333;
+                    height: 100%;
+                    display: block;
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    padding-top: 50px;
+                    font-weight: 600;
+                    text-align: center;
+                    box-sizing: border-box;
+
+                    i{
+                        display: block;
+                    width: 50px;
+                    height: 50px;
+                    margin: 0 auto 10px;
+                    background-color: #fff;
+                    background-position: 0 0;
+                    border-radius: 50%;
+                    }
+                }
             }
 
             .slide_wrap {
                 position: relative;
                 height: 350px;
+                display: none;
 
                 .slide {
                     position: relative;
+
                     a {
-                        img {}
 
                         p {
                             position: absolute;
@@ -72,9 +121,7 @@ body {
                             font-size: 14px;
                         }
                     }
-
                 }
-
 
                 .custom_paging {
                     position: absolute;
@@ -126,32 +173,32 @@ body {
                 }
 
                 .buttons {
-                        position: absolute;
-                        right: 27px;
-                        bottom: 13px;
-                        width: 15px;
-                        height: 15px;
-                        color: #fff;
-                        font-size: 13px;
+                    position: absolute;
+                    right: 27px;
+                    bottom: 13px;
+                    width: 15px;
+                    height: 15px;
+                    color: #fff;
+                    font-size: 13px;
 
-                    .pause {   
+                    .pause1 {
                         display: none;
-                        height: 100%;                
+                        height: 100%;
                         background: url(../img/arrow1.png) no-repeat;
                         background-position: -285px -285px;
 
-                        &.on{
+                        &.on {
                             display: block;
-                        } 
+                        }
                     }
 
-                    .play {
+                    .play1 {
                         display: none;
-                        height: 100%; 
+                        height: 100%;
                         background: url(../img/arrow1.png) no-repeat;
                         background-position: -269px -285px;
 
-                        &.on{
+                        &.on {
                             display: block;
                         }
                     }
@@ -161,12 +208,90 @@ body {
 
         }
 
-        .cont01 h3 {
-            top: 0;
+        .cont01 {
+            h3 {
+                top: 0;
+
+                i {
+                    background: url(../img/slide1_i.png) no-repeat 0 0;
+                }
+
+            }
+
+            .buttons {
+                position: absolute;
+                right: 27px;
+                bottom: 13px;
+                width: 15px;
+                height: 15px;
+                color: #fff;
+                font-size: 13px;
+
+                .pause1 {
+                    display: none;
+                    height: 100%;
+                    background: url(../img/arrow1.png) no-repeat;
+                    background-position: -285px -285px;
+
+                    &.on {
+                        display: block;
+                    }
+                }
+
+                .play1 {
+                    display: none;
+                    height: 100%;
+                    background: url(../img/arrow1.png) no-repeat;
+                    background-position: -269px -285px;
+
+                    &.on {
+                        display: block;
+                    }
+                }
+            }
         }
 
-        .cont02 h3 {
-            top: 50%;
+        .cont02 {
+            h3 {
+                top: 50%;
+
+                i {
+                    background: url(../img/slide1_i.png) no-repeat 0 0;
+                    background-position: -50px 0px;
+                }
+            }
+
+            .buttons {
+                position: absolute;
+                right: 27px;
+                bottom: 13px;
+                width: 15px;
+                height: 15px;
+                color: #fff;
+                font-size: 13px;
+
+                .pause2 {
+                    display: none;
+                    height: 100%;
+                    background: url(../img/arrow1.png) no-repeat;
+                    background-position: -285px -285px;
+
+                    &.on {
+                        display: block;
+                    }
+                }
+
+                .play2 {
+                    display: none;
+                    height: 100%;
+                    background: url(../img/arrow1.png) no-repeat;
+                    background-position: -269px -285px;
+
+                    &.on {
+                        display: block;
+                    }
+                }
+            }
         }
 
     }

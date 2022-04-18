@@ -29,18 +29,61 @@ body a {
   z-index: 10;
 }
 .section1 .slide1 .cont.active h3 {
-  background: #00f;
+  background: #0158a8;
+}
+.section1 .slide1 .cont.active h3::after {
+  content: " ";
+  position: absolute;
+  z-index: 10;
+  left: 99%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 25px 0 25px 32px;
+  border-color: transparent transparent transparent #0158a8;
+  margin-top: -25px;
+}
+.section1 .slide1 .cont.active h3 a {
+  color: #fff;
+  height: 100%;
+  display: block;
+}
+.section1 .slide1 .cont.active .slide_wrap {
+  display: block;
 }
 .section1 .slide1 .cont h3 {
   position: absolute;
   left: -80px;
   height: 50%;
-  background: #ccc;
+  background: #d2e1e9;
   width: 80px;
+}
+.section1 .slide1 .cont h3 a {
+  color: #333;
+  height: 100%;
+  display: block;
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 50px;
+  font-weight: 600;
+  text-align: center;
+  box-sizing: border-box;
+}
+.section1 .slide1 .cont h3 a i {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 10px;
+  background-color: #fff;
+  background-position: 0 0;
+  border-radius: 50%;
 }
 .section1 .slide1 .cont .slide_wrap {
   position: relative;
   height: 350px;
+  display: none;
 }
 .section1 .slide1 .cont .slide_wrap .slide {
   position: relative;
@@ -113,29 +156,90 @@ body a {
   color: #fff;
   font-size: 13px;
 }
-.section1 .slide1 .cont .slide_wrap .buttons .pause {
+.section1 .slide1 .cont .slide_wrap .buttons .pause1 {
   display: none;
   height: 100%;
   background: url(../img/arrow1.png) no-repeat;
   background-position: -285px -285px;
 }
-.section1 .slide1 .cont .slide_wrap .buttons .pause.on {
+.section1 .slide1 .cont .slide_wrap .buttons .pause1.on {
   display: block;
 }
-.section1 .slide1 .cont .slide_wrap .buttons .play {
+.section1 .slide1 .cont .slide_wrap .buttons .play1 {
   display: none;
   height: 100%;
   background: url(../img/arrow1.png) no-repeat;
   background-position: -269px -285px;
 }
-.section1 .slide1 .cont .slide_wrap .buttons .play.on {
+.section1 .slide1 .cont .slide_wrap .buttons .play1.on {
   display: block;
 }
 .section1 .slide1 .cont01 h3 {
   top: 0;
 }
+.section1 .slide1 .cont01 h3 i {
+  background: url(../img/slide1_i.png) no-repeat 0 0;
+}
+.section1 .slide1 .cont01 .buttons {
+  position: absolute;
+  right: 27px;
+  bottom: 13px;
+  width: 15px;
+  height: 15px;
+  color: #fff;
+  font-size: 13px;
+}
+.section1 .slide1 .cont01 .buttons .pause1 {
+  display: none;
+  height: 100%;
+  background: url(../img/arrow1.png) no-repeat;
+  background-position: -285px -285px;
+}
+.section1 .slide1 .cont01 .buttons .pause1.on {
+  display: block;
+}
+.section1 .slide1 .cont01 .buttons .play1 {
+  display: none;
+  height: 100%;
+  background: url(../img/arrow1.png) no-repeat;
+  background-position: -269px -285px;
+}
+.section1 .slide1 .cont01 .buttons .play1.on {
+  display: block;
+}
 .section1 .slide1 .cont02 h3 {
   top: 50%;
+}
+.section1 .slide1 .cont02 h3 i {
+  background: url(../img/slide1_i.png) no-repeat 0 0;
+  background-position: -50px 0px;
+}
+.section1 .slide1 .cont02 .buttons {
+  position: absolute;
+  right: 27px;
+  bottom: 13px;
+  width: 15px;
+  height: 15px;
+  color: #fff;
+  font-size: 13px;
+}
+.section1 .slide1 .cont02 .buttons .pause2 {
+  display: none;
+  height: 100%;
+  background: url(../img/arrow1.png) no-repeat;
+  background-position: -285px -285px;
+}
+.section1 .slide1 .cont02 .buttons .pause2.on {
+  display: block;
+}
+.section1 .slide1 .cont02 .buttons .play2 {
+  display: none;
+  height: 100%;
+  background: url(../img/arrow1.png) no-repeat;
+  background-position: -269px -285px;
+}
+.section1 .slide1 .cont02 .buttons .play2.on {
+  display: block;
 }
 .section1 .banner {
   float: right;
