@@ -89,70 +89,12 @@ $(function(){
     
 
 
-    // var content2 = new Swiper(".content2", {
-    //     loop: true,
-    //     autoplay: {
-    //         delay: 2500,
-    //         disableOnInteraction: false,
-    //       },
-
-    //     pagination: {
-    //       el: ".pages",
-    //       type: "fraction",
-    //     },
-    //     navigation: {
-    //         nextEl: ".next",
-    //         prevEl: ".prev",
-    //     },
-    //   });
-
-    //   $('.btn_state2').click(function(){
-    //     if($('.btn_state2 .pause').hasClass('on')){
-    //         $('.btn_state2 .pause').removeClass('on');
-    //         $('.btn_state2 .play').addClass('on');
-    //         content2.autoplay.stop();
-    //     }else{
-    //         $('.btn_state2 .pause').addClass('on');
-    //         $('.btn_state2 .play').removeClass('on');
-    //         content2.autoplay.start();
-    //     }
-    // })
-
-    // var slide2 = new Swiper(".slide2", {
-    //     slidesPerView: 'auto',
-    //     loop: true,
-    //     autoplay: {
-    //         delay: 2500,
-    //         disableOnInteraction: false,
-    //       },
-
-    //       pagination: {
-    //         el: ".pagination",
-    //         type: "fraction",
-    //       },
-    //     navigation: {
-    //       nextEl: ".next",
-    //       prevEl: ".prev",
-    //     },
-    //   });
-
-    //   $('.btn_state').click(function(){
-    //     if($('.btn_state .pause').hasClass('on')){
-    //         $('.btn_state .pause').removeClass('on');
-    //         $('.btn_state .play').addClass('on');
-    //         slide2.autoplay.stop();
-    //     }else{
-    //         $('.btn_state .pause').addClass('on');
-    //         $('.btn_state .play').removeClass('on');
-    //         slide2.autoplay.start();
-    //     }
-    // })
 
     $(".slide2").slick({
       infinite: true,
       autoplay: true,
-      autoplaySpeed: 2000,
-      slidesToShow: 1,
+      autoplaySpeed: 1000,
+      slidesToShow: 3,
       slidesToScroll: 1,
       speed: 2000,
       autoplay: true,
@@ -167,16 +109,16 @@ $(function(){
       }
     });
     
-    $(".pause2").on("click", function () {
-      $(".slide1-2").slick("slickPause");
-      $('.pause2').removeClass('on');
-      $('.play2').addClass('on');
+    $(".pause3").on("click", function () {
+      $(".slide2").slick("slickPause");
+      $('.pause3').removeClass('on');
+      $('.play3').addClass('on');
     });
     
-    $(".play2").on("click", function () {
-      $(".slide1-2").slick("slickPlay");
-      $('.pause2').addClass('on');
-      $('.play2').removeClass('on');
+    $(".play3").on("click", function () {
+      $(".slide2").slick("slickPlay");
+      $('.pause3').addClass('on');
+      $('.play3').removeClass('on');
     });
 
     // 서브메뉴

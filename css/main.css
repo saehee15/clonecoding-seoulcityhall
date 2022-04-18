@@ -16,7 +16,6 @@ body a {
   float: left;
   width: 770px;
   height: 350px;
-  background: #ccc;
 }
 .section1 .slide1 .cont {
   position: absolute;
@@ -41,7 +40,7 @@ body a {
   height: 0;
   border-style: solid;
   border-width: 25px 0 25px 32px;
-  border-color: transparent transparent transparent #0158a8;
+  border-color: transparent #0158a8;
   margin-top: -25px;
 }
 .section1 .slide1 .cont.active h3 a {
@@ -813,60 +812,76 @@ body a {
   content: "";
   clear: both;
 }
-.section8 ul li {
+.section8 .slide2 .slide {
   float: left;
-  list-style: none;
   position: relative;
   width: 355px;
   margin-right: 43px;
 }
-.section8 .navigation_wrap {
-  margin-top: 10px;
-  align-items: center;
+.section8 .slide2 .custom_paging {
+  width: 40px;
   float: right;
+  margin-top: 30px;
+  right: 10%;
+  margin-right: 60px;
 }
-.section8 .navigation_wrap .pagination {
-  padding-top: 4px;
-  width: 50px;
-  float: left;
+.section8 .slide2 .custom_paging li {
+  display: none;
 }
-.section8 .navigation_wrap .navigation {
-  float: left;
+.section8 .slide2 .custom_paging li.slick-active {
+  display: block;
 }
-.section8 .navigation_wrap .navigation .btn {
-  float: left;
+.section8 .slide2 button {
+  border: 1px solid #999;
+}
+.section8 .slide2 button.slick-prev {
+  background: url(../img/arrow1.png) no-repeat center;
+  background-position: -45px -43px;
+  left: 95%;
+  top: 130%;
+}
+.section8 .slide2 button.slick-prev::before {
+  display: none;
+}
+.section8 .slide2 button.slick-next {
+  background: url(../img/arrow1.png) no-repeat center;
+  background-position: -86px -43px;
+  right: 0%;
+  top: 130%;
+}
+.section8 .slide2 button.slick-next::before {
+  display: none;
+}
+.section8 .buttons {
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  position: absolute;
+  right: 20px;
+  bottom: 49.5px;
   width: 20px;
   height: 20px;
-  border: 1px solid #999;
-  border-right: 0;
-  overflow: hidden;
+  color: #fff;
+  font-size: 13px;
 }
-.section8 .navigation_wrap .navigation .btn.prev {
-  background: url(../img/bg_logo1.png) no-repeat -45px -43px;
-}
-.section8 .navigation_wrap .navigation .btn.next {
-  background: url(../img/bg_logo1.png) no-repeat -86px -43px;
-  border-right: 1px solid #999;
-}
-.section8 .navigation_wrap .navigation .btn.pause {
-  background: url(../img/bg_logo1.png) no-repeat -65px -43px;
-}
-.section8 .navigation_wrap .navigation .btn.play {
-  background: url(../img/bg_logo1.png) no-repeat -101px -43px;
-}
-.section8 .navigation_wrap .navigation .btn.swiper-button-next::after, .section8 .navigation_wrap .navigation .btn.swiper-button-prev::after {
+.section8 .buttons .pause3 {
   display: none;
+  height: 100%;
+  background: url(../img/arrow1.png) no-repeat;
+  background-position: -65px -43px;
 }
-.section8 .navigation_wrap .navigation .btn_state button {
+.section8 .buttons .pause3.on {
+  display: block;
+  margin-left: 2px;
+}
+.section8 .buttons .play3 {
   display: none;
+  height: 100%;
+  background: url(../img/arrow1.png) no-repeat;
+  background-position: -101px -43px;
 }
-.section8 .navigation_wrap .navigation .btn_state button.on {
+.section8 .buttons .play3.on {
   display: block;
-}
-.section8 .navigation_wrap .navigation::after {
-  display: block;
-  content: "";
-  clear: both;
+  margin-left: 2px;
 }
 
 .section9 {

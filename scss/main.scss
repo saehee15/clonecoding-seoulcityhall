@@ -20,7 +20,6 @@ body {
         float: left;
         width: 770px;
         height: 350px;
-        background: #ccc;
 
         .cont {
             position: absolute;
@@ -45,7 +44,7 @@ body {
                         height: 0;
                         border-style: solid;
                         border-width: 25px 0 25px 32px;
-                        border-color: transparent transparent transparent #0158a8;
+                        border-color: transparent #0158a8;
                         margin-top: -25px;
                     }
 
@@ -81,14 +80,14 @@ body {
                     text-align: center;
                     box-sizing: border-box;
 
-                    i{
+                    i {
                         display: block;
-                    width: 50px;
-                    height: 50px;
-                    margin: 0 auto 10px;
-                    background-color: #fff;
-                    background-position: 0 0;
-                    border-radius: 50%;
+                        width: 50px;
+                        height: 50px;
+                        margin: 0 auto 10px;
+                        background-color: #fff;
+                        background-position: 0 0;
+                        border-radius: 50%;
                     }
                 }
             }
@@ -999,79 +998,92 @@ body {
         clear: both;
     }
 
-    ul {
-        li {
+    .slide2 {
+        
+        .slide {
             float: left;
-            list-style: none;
             position: relative;
             width: 355px;
             margin-right: 43px;
         }
-    }
 
-    .navigation_wrap {
-        margin-top: 10px;
-        align-items: center;
-        float: right;
+        .custom_paging {
+            width: 40px;
+            float: right;
+            margin-top: 30px;
+            right: 10%;
+            margin-right: 60px;
 
+            li {
+                display: none;
 
-        .pagination {
-            padding-top: 4px;
-            width: 50px;
-            float: left;
-
+                &.slick-active {
+                    display: block;
+                }
+            }
         }
 
-        .navigation {
-            float: left;
+        button {
+            border: 1px solid #999;
 
-            .btn {
-                float: left;
-                width: 20px;
-                height: 20px;
-                border: 1px solid #999;
-                border-right: 0;
-                overflow: hidden;
+            &.slick-prev {
+                background: url(../img/arrow1.png) no-repeat center;
+                background-position:  -45px -43px;
+                left: 95%;
+                top: 130%;
 
-
-                &.prev {
-                    background: url(../img/bg_logo1.png) no-repeat -45px -43px;
-                }
-
-                &.next {
-                    background: url(../img/bg_logo1.png) no-repeat -86px -43px;
-                    border-right: 1px solid #999;
-                    ;
-                }
-
-                &.pause {
-                    background: url(../img/bg_logo1.png) no-repeat -65px -43px;
-                }
-
-                &.play {
-                    background: url(../img/bg_logo1.png) no-repeat -101px -43px;
-                }
-
-                &.swiper-button-next::after,
-                &.swiper-button-prev::after {
+                &::before {
                     display: none;
                 }
             }
 
-            .btn_state {
-                button {
-                    display: none;
+            &.slick-next {
+                background: url(../img/arrow1.png) no-repeat center;
+                background-position: -86px -43px;
+                right: 0%;
+                top: 130%;
 
-                    &.on {
-                        display: block;
-                    }
+                &::before {
+                    display: none;
+                 
                 }
             }
+        }
+    }
 
-            &::after {
+
+    .buttons {
+        border-top: 1px solid #999;
+        border-bottom: 1px solid #999;
+        position: absolute;
+        right: 20px;
+        bottom: 49.5px;
+        width: 20px;
+        height: 20px;
+        color: #fff;
+        font-size: 13px;
+
+        .pause3 {
+            display: none;
+            height: 100%;
+            background: url(../img/arrow1.png) no-repeat;
+            background-position:  -65px -43px;
+
+            &.on {
                 display: block;
-                content: "";
-                clear: both;
+                margin-left: 2px;
+            }
+        }
+
+        .play3 {
+            display: none;
+            height: 100%;
+            background: url(../img/arrow1.png) no-repeat;
+            background-position:  -101px -43px;
+
+            &.on {
+                display: block;
+                margin-left: 2px;
             }
         }
     }
