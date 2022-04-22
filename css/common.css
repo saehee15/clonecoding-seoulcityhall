@@ -1,21 +1,5 @@
-.inner {
-  position: relative;
-  width: 1152px;
-  margin: 0 auto;
-  min-width: 1152px;
-}
+.inner { position: relative; width: 1152px; margin: 0 auto; min-width: 1152px; }
 
-.inner_wrap {
-  width: 1152px;
-  margin: auto;
-  box-sizing: border-box;
-}
+.inner_wrap { width: 1152px; margin: auto; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.blind {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  margin: -1px;
-}
+.blind { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); margin: -1px; }

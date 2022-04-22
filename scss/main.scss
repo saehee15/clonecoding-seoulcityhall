@@ -57,7 +57,8 @@ body {
                 }
 
                 .slide_wrap {
-                    display: block;
+                    // display: block;
+                    visibility: visible;
                 }
             }
 
@@ -95,7 +96,8 @@ body {
             .slide_wrap {
                 position: relative;
                 height: 350px;
-                display: none;
+                visibility: hidden;
+                // display: none;
 
                 .slide {
                     position: relative;
